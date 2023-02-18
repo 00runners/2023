@@ -1,0 +1,13 @@
+#navbar-example2{
+    background-color: transparent !important;
+    text-decoration: none;
+    color: white !important;
+}
+
+.credit{
+    color: grey;
+}
+
+.about-title{
+    font-weight: bold;
+}
