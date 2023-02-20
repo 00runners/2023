@@ -1,0 +1,47 @@
+#navbar-example2{
+    text-decoration: none;
+    color: white !important;
+}
+
+.credit{
+    color: grey;
+}
+
+.about-title{
+    font-weight: bold;
+}
+
+video{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    object-fit: fill !important;
+}
+
+@media screen and (max-width: 576px) {
+    video{
+        height: 70vh !important;
+    }
+  }
+
+@media screen and (min-width: 577px) 
+/* and (max-width: 992px) {
+    video{
+        height: 60vh !important;
+    }
+  }
+  
+  @media screen and (min-width: 993px) */
+   {
+    video{
+        width: 100%
+    }
+  }
+
+  .d-block{
+    object-fit: cover;
+  }
+
+h3{
+    text-align: center;
+    margin: 30px 0;
+}
