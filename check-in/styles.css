@@ -1,0 +1,60 @@
+body{
+  margin-top: 100px;
+  background-color: rgb(94, 255, 0);
+}
+
+.marquee .marqueeB{
+  justify-content: space;
+  display: flex;
+}
+
+.marquee-container {
+  height: 3rem;
+  overflow: hidden;
+  line-height: 3rem;
+  font-size: 2rem
+}
+.marquee-container .marquee {
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: marquee 8s linear infinite;
+}
+.marquee-container .marqueeB {
+  left: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  animation: marqueeB 8s linear infinite;
+}
+.marquee-container .marquee2 {
+  animation-delay: 4s;
+}
+.marquee-container b {
+  padding-left: 10px;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes marqueeB {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: +100%;
+  }
+}
+
+.cont2{
+  bottom: 100px;
+}
