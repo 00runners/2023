@@ -11,86 +11,71 @@
     <!-- fonts -->
     <link rel="stylesheet" href="src/styles.css">
     <link rel="fonts" href="src/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 
-<title>00runners (Work In Progress)</title>
+<title>00runners</title>
 </head>
 <body>
     <div id="navBar"></div>
 
-    <br><br>
-
-    <div class="container">
-        <div class="sketchBox">최근 러닝 세션 사진&정보</div>
-        <div class="sketchBox" style="padding: 40px;">다음 세션 소개</div>
-            <div style="color: grey">
-            <br><h3>아래로는 멤버 랭크</h3>
-            * collapsed 에서 보여지는 것: 순위, 이름, Role, 인스타그램 id, 마라톤<br>
-            * opended 에서 보여지는 것: 러닝 로그, bio(TBD)
+    <div class="container" style="max-width: 600px;">
+     
+      <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin: 0px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1500">
+            <img src="src/pics/23-1-OpenRun-2-293.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>올림픽공원 정규런</h5>
+              <p>"공원 바깥으로 크게 한 바퀴!" - 3/10</p>
             </div>
-            <br>
+
+          </div>
+          <div class="carousel-item" data-bs-interval="1500">
+            <img src="src/pics/23-1-OpenRun-2-241.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>올림픽공원 정규런</h5>
+              <p>"공원 바깥으로 크게 한 바퀴!" - 3/10</p>
+            </div>
+
+          </div>
+          <div class="carousel-item" data-bs-interval="1500">
+            <img src="src/pics/23-1-OpenRun-2-334.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>올림픽공원 정규런</h5>
+              <p>"공원 바깥으로 크게 한 바퀴!" - 3/10</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <br>
+      
+      <a id="member" class="anchor"></a>
+
+      <div id="nextRun"></div>
+      
+      <br>
             
+      <h2>Crew Members:</h2>
+      <p style="color: #888; margin-bottom: 8px;"><i>누적 Marathon 점수별로 보여집니다.</i></p>
+        
+      <div id="memberRank"> </div>
 
+      <a id="guest" class="anchor"></a>
+      <br><br><br>
 
-            <div id="memberRank">
+      <h2>Guest 신청하기:</h2>
+      <div style="padding: 2px;">
+      <p style="font-family: 'Roboto Mono';">정규런은 매주 금요일에 열립니다. 정규런 이틀 전인 수요일 오후 6시 게스트 신청 링크가 <a style="color: white" href="https://instagram.com/00runners">@00runners 인스타그램</a> 프로필에 공개됩니다. <br>해당 정규런이 Member Only Run 이거나, 참가 신청한 멤버가 일정 인원수를 초과했을 경우 게스트 신청 없이 진행됩니다.<br><br>1) 게스트 참가비는 5,000원이며 신청 이후 참석을 취소하여도 환불해 드리지 않습니다.<br>2) 2000년생만 참가 가능합니다. 게스트로 3번 참여하면 크루 멤버의 자격을 얻게 됩니다.</p>
+      </div>
+      <br><br><br><br>
 
-            <details class="memberStrip">
-                <summary>
-                  <div class="row">
-                    <div class="col-2 rankDiv">
-                       #1
-                    </div>
-                    <div class="col-5 nameDiv">
-                      <p class="nameField"><b>박종한</b></p>
-                      <small class="instagramIdDiv">@jonghan_future</small>
-                    </div>
-                    <div class="col-3">
-                      <mark class="label"><i>HQ</i></mark>
-                    </div>
-                    <div class="col-2 marathonDiv">
-                     <b>10K</b>
-                    </div>
-                  </div>
-                </summary>
+      <div id="footer"></div>
 
-                <hr style="color: red; height: 2px;">
-                <div markdown="1">
-                
-                <div class="row logContents">
-                  <div class="col-3">
-                    3월
-                  </div>
-                  <div class="col-6">
-                    옥수 정규런
-                  </div>
-                  <div class="col-3">
-                    +5K
-                  </div>
-                </div>
-
-                <div class="row logContents">
-                  <div class="col-3">
-                    3월
-                  </div>
-                  <div class="col-6">
-                    옥수 정규런
-                  </div>
-                  <div class="col-3">
-                    +5K
-                  </div>
-                </div>
-
-                <div class="instagramSection">
-                  instagram: @jonghan_future
-                </div>
-
-                </div>
-                </details>
-
-
-               </div>
-
-            <br><br><br>
-            
+        
 
     </div>
     
@@ -100,15 +85,15 @@
       //  데이터를 두 파일로 나눠놓은 이유: 업데이트의 용이함.
       // log 파일의 구조를 짠 기준: 데이터 업데이트의 편리함.
       // uid 기준으로 불러와서 정렬하는 로직을 짜야 함. 
-      // 마라톤 합산해서 show라는 이름의 array에 넣고, sort
+      // 마라톤 합산해서 show라는 이름의 array에 넣고, sort.
 
         import c from "/src/component.js";
         import u from "/src/user.js";
         import l from "/src/log.js";
 
-        console.log(u[0]['uid']);
-        console.log(u[0]['badge'][0]);
-        console.log(u);
+        // console.log(u[0]['uid']);
+        // console.log(u[0]['badge'][0]);
+        // console.log(u);
 
         // **** mSum 산출 ****
         let mSum = l.reduce(function(acc, item) {
@@ -118,78 +103,87 @@
           acc[item.uid] += item.marathon;
           return acc;
         }, {});
-        console.log(mSum);
+        // console.log(mSum);
 
         // **** mSum 순서대로 정렬 ****
         const rank = Object.keys(mSum).map(function(key) {
           return {uid: key, marathon: mSum[key]};
         });
         rank.sort(function(a, b) {
-          return b.value - a.value;
+          return b.marathon - a.marathon;
         });
-        console.log(rank);
-
-        console.log(u[rank[0]['uid']]['badge']);
-        console.log(rank[0]['marathon']);
-
 
         document.getElementById("navBar").insertAdjacentHTML("beforeEnd", c['navBar']);
-        document.getElementById("memberRank").insertAdjacentHTML("beforeEnd",
+
+        document.getElementById("nextRun").insertAdjacentHTML("beforeEnd", c['nextRun']);
+
+        document.getElementById("footer").insertAdjacentHTML("beforeEnd", c['footer']);
+
+        
+
+        function memberRank(){
+        
+          for(let i=1; i<rank.length; i++){
+
+            let badge = "";
+            let memberLog = "";
+
+            if(u[rank[i]['uid']]['badge'][0]){
+              badge = `<mark class="label"><i>`+u[rank[i]['uid']]['badge'][0]+`</i></mark>`;}else{}
+
+            let log = l.filter(function(obj){ return obj.uid === parseInt(rank[i]['uid']); });
+            
+            for(let j=0; j<log.length; j++){
+            memberLog +=
+            `<div class="row logContents">
+                  <div class="col-3">
+                    `+log[j]['month']+`
+                  </div>
+                  <div class="col-7">
+                    `+log[j]['sessionName']+`
+                  </div>
+                  <div class="col-2 marathonContentField">
+                    +`+log[j]['marathon']+`K
+                  </div>
+                </div>`;
+            }
+
+          document.getElementById("memberRank").insertAdjacentHTML("beforeEnd",
         `<details class="memberStrip">
                 <summary>
                   <div class="row">
                     <div class="col-2 rankDiv">
-                       #1
+                       #`+i+`
                     </div>
                     <div class="col-5 nameDiv">
-                      <p class="nameField"><b>박종한</b></p>
-                      <small class="instagramIdDiv">@jonghan_future</small>
+                      <p class="nameField"><b>`+u[rank[i]['uid']]['name']+`</b></p>
+                      <small class="instagramIdDiv">@`+u[rank[i]['uid']]['instagram']+`</small>
                     </div>
                     <div class="col-3">
-                      <mark class="label"><i>HQ</i></mark>
+                      `+badge+`
                     </div>
                     <div class="col-2 marathonDiv">
-                     <b>10K</b>
+                     <b>`+rank[i]['marathon']+`K</b>
                     </div>
                   </div>
                 </summary>
-
-                <hr style="color: red; height: 2px;">
+                <hr class="contentDivider">
                 <div markdown="1">
-                
-                <div class="row logContents">
-                  <div class="col-3">
-                    3월
-                  </div>
-                  <div class="col-6">
-                    옥수 정규런
-                  </div>
-                  <div class="col-3">
-                    +5K
-                  </div>
-                </div>
-
-                <div class="row logContents">
-                  <div class="col-3">
-                    3월
-                  </div>
-                  <div class="col-6">
-                    옥수 정규런
-                  </div>
-                  <div class="col-3">
-                    +5K
-                  </div>
-                </div>
-
+                  `+memberLog+`
                 <div class="instagramSection">
-                  instagram: @jonghan_future
+                  instagram: @`+u[rank[i]['uid']]['instagram']+`
                 </div>
 
                 </div>
+
                 </details>`
 
-                );
+      
+              );
+            };
+          };
 
+          memberRank();
 
         </script>
 

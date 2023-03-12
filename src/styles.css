@@ -6,16 +6,38 @@
     margin: 10px;
     text-align: center;
 }
-
 body{
     background-color: #131313;
     color: white;
 }
+h2{
+    font-family: 'Roboto Mono';
+}
+#animated-text{
+    animation: text-color 2s ease-in-out infinite;
+}
+@keyframes text-color {
+    0% {
+      color: rgb(255, 102, 0);
+      animation-timing-function: ease-in;
+    }
+    50% {
+      color: grey;
+      animation-timing-function: ease-out;
+    }
+    100% {
+      color: rgb(255, 102, 0);
+      animation-timing-function: ease-in;
+    }
+  }
+
+
 .memberStrip{
     background-color: #222;
-    padding: 22px;
+    padding: 20px;
     border-radius: 4px;
     margin-bottom: 8px;
+    border: 1px solid #444;
 }
 summary{
     list-style: none
@@ -23,18 +45,21 @@ summary{
 
 .rankDiv{
     text-align: center;
+    font-family: 'Roboto Mono';
 }
 .nameDiv{
-    line-height: 2px;
+    line-height: 4px;
 }
 .nameField{
     font-size: 1.2rem;
 }
 .instagramIdDiv{
     opacity: 50%;
+    font-family: 'Roboto Mono';
 }
 .marathonDiv{
     text-align: center;
+    font-family: 'Roboto Mono';
 }
 .label{
     background-color: #444;
@@ -43,13 +68,26 @@ summary{
     font-size: 0.8rem;
     color: white;
 }
+
+
+.contentDivider{
+    border: 1px solid #999;
+}
 .logContents{
     text-align: center;
     margin-bottom: 6px;
+}
+.logContents.marathonContentField{
+    font-family: 'Roboto Mono' !important;
 }
 .instagramSection{
     margin-top: 12px;
     margin-bottom: 0px;
     font-size: 0.9rem;
-    font-family: 'roboto';
+    font-family: 'Roboto Mono';
+    opacity: 60%;
+}
+
+.docs-text-container{
+    line-height: 160%;
 }
