@@ -40,9 +40,11 @@ h2{
     border: 1px solid #444;
 }
 summary{
-    list-style: none
+    list-style: none;
 }
-
+details summary::-webkit-details-marker {
+    display: none;
+}
 .rankDiv{
     text-align: center;
     font-family: 'Roboto Mono';
