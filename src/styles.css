@@ -6,3 +6,50 @@
     margin: 10px;
     text-align: center;
 }
+
+body{
+    background-color: #131313;
+    color: white;
+}
+.memberStrip{
+    background-color: #222;
+    padding: 22px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+summary{
+    list-style: none
+}
+
+.rankDiv{
+    text-align: center;
+}
+.nameDiv{
+    line-height: 2px;
+}
+.nameField{
+    font-size: 1.2rem;
+}
+.instagramIdDiv{
+    opacity: 50%;
+}
+.marathonDiv{
+    text-align: center;
+}
+.label{
+    background-color: #444;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: white;
+}
+.logContents{
+    text-align: center;
+    margin-bottom: 6px;
+}
+.instagramSection{
+    margin-top: 12px;
+    margin-bottom: 0px;
+    font-size: 0.9rem;
+    font-family: 'roboto';
+}

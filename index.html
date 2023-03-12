@@ -29,39 +29,168 @@
             </div>
             <br>
             
-            <div class="accordion mb-3">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      #1 &nbsp; <b>오상훈</b> &nbsp;[HQ]
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+
+            <div id="memberRank">
+
+            <details class="memberStrip">
+                <summary>
+                  <div class="row">
+                    <div class="col-2 rankDiv">
+                       #1
+                    </div>
+                    <div class="col-5 nameDiv">
+                      <p class="nameField"><b>박종한</b></p>
+                      <small class="instagramIdDiv">@jonghan_future</small>
+                    </div>
+                    <div class="col-3">
+                      <mark class="label"><i>HQ</i></mark>
+                    </div>
+                    <div class="col-2 marathonDiv">
+                     <b>10K</b>
                     </div>
                   </div>
-                </div>
-                
+                </summary>
 
-            </div>
+                <hr style="color: red; height: 2px;">
+                <div markdown="1">
+                
+                <div class="row logContents">
+                  <div class="col-3">
+                    3월
+                  </div>
+                  <div class="col-6">
+                    옥수 정규런
+                  </div>
+                  <div class="col-3">
+                    +5K
+                  </div>
+                </div>
+
+                <div class="row logContents">
+                  <div class="col-3">
+                    3월
+                  </div>
+                  <div class="col-6">
+                    옥수 정규런
+                  </div>
+                  <div class="col-3">
+                    +5K
+                  </div>
+                </div>
+
+                <div class="instagramSection">
+                  instagram: @jonghan_future
+                </div>
+
+                </div>
+                </details>
+
+
+               </div>
+
             <br><br><br>
             
 
     </div>
     
-    
-    
-    
-
-
-
 
 
     <script type="module">
+      //  데이터를 두 파일로 나눠놓은 이유: 업데이트의 용이함.
+      // log 파일의 구조를 짠 기준: 데이터 업데이트의 편리함.
+      // uid 기준으로 불러와서 정렬하는 로직을 짜야 함. 
+      // 마라톤 합산해서 show라는 이름의 array에 넣고, sort
+
         import c from "/src/component.js";
+        import u from "/src/user.js";
+        import l from "/src/log.js";
+
+        console.log(u[0]['uid']);
+        console.log(u[0]['badge'][0]);
+        console.log(u);
+
+        // **** mSum 산출 ****
+        let mSum = l.reduce(function(acc, item) {
+          if (!acc[item.uid]) {
+            acc[item.uid] = 0;
+          }
+          acc[item.uid] += item.marathon;
+          return acc;
+        }, {});
+        console.log(mSum);
+
+        // **** mSum 순서대로 정렬 ****
+        const rank = Object.keys(mSum).map(function(key) {
+          return {uid: key, marathon: mSum[key]};
+        });
+        rank.sort(function(a, b) {
+          return b.value - a.value;
+        });
+        console.log(rank);
+
+        console.log(u[rank[0]['uid']]['badge']);
+        console.log(rank[0]['marathon']);
+
 
         document.getElementById("navBar").insertAdjacentHTML("beforeEnd", c['navBar']);
+        document.getElementById("memberRank").insertAdjacentHTML("beforeEnd",
+        `<details class="memberStrip">
+                <summary>
+                  <div class="row">
+                    <div class="col-2 rankDiv">
+                       #1
+                    </div>
+                    <div class="col-5 nameDiv">
+                      <p class="nameField"><b>박종한</b></p>
+                      <small class="instagramIdDiv">@jonghan_future</small>
+                    </div>
+                    <div class="col-3">
+                      <mark class="label"><i>HQ</i></mark>
+                    </div>
+                    <div class="col-2 marathonDiv">
+                     <b>10K</b>
+                    </div>
+                  </div>
+                </summary>
+
+                <hr style="color: red; height: 2px;">
+                <div markdown="1">
+                
+                <div class="row logContents">
+                  <div class="col-3">
+                    3월
+                  </div>
+                  <div class="col-6">
+                    옥수 정규런
+                  </div>
+                  <div class="col-3">
+                    +5K
+                  </div>
+                </div>
+
+                <div class="row logContents">
+                  <div class="col-3">
+                    3월
+                  </div>
+                  <div class="col-6">
+                    옥수 정규런
+                  </div>
+                  <div class="col-3">
+                    +5K
+                  </div>
+                </div>
+
+                <div class="instagramSection">
+                  instagram: @jonghan_future
+                </div>
+
+                </div>
+                </details>`
+
+                );
+
+
         </script>
 
 </body>
