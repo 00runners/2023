@@ -1,6 +1,6 @@
 export default {
   "navBar" :
-    ` <nav id="navbar-example2" class="navbar bg-transparent px-3 fixed-top" style="font-size: 1rem; font-family: 'Roboto Mono';">
+    ` <nav id="navbar-example2" class="navbar bg-transparent px-3 fixed-top" style="font-size: 1rem; font-family: 'Roboto Mono'; backdrop-filter: blur(1px);">
     <a class="navbar-brand" href="index.html" style="color: white; font-size: 1.2rem"><b>&nbsp;00runners</b></a>
     <ul class="nav nav-pills">
         <li class="nav-item">
