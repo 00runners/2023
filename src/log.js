@@ -992,5 +992,12 @@ export default[
       "month": "3월",
       "sessionName": "올림픽공원 정규런",
       "marathon": 5
+    },
+    {
+      "uid": 69,
+      "lid": 143,
+      "month": "3월",
+      "sessionName": "올림픽공원 정규런",
+      "marathon": 5
     }
   ]
