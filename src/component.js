@@ -24,7 +24,7 @@ export default {
 
   "footer" : 
   `<section id="footer" style="font-family: 'Roboto Mono'; text-align: center; color: grey;">
-  2023 (c)00runners
+  2023 (c)00runners<br><small>Design/Development: 박종한</small>
   </section>
   <br><br>`
 }
