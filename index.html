@@ -8,6 +8,7 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <!-- fonts -->
     <link rel="stylesheet" href="src/styles.css">
     <link rel="fonts" href="src/fonts.css">
@@ -64,6 +65,9 @@
       <div class="container" style="max-width: 600px;">
       
       <br>
+
+
+      <br>
       
       <a id="member" class="anchor"></a>
 
@@ -72,7 +76,22 @@
       <br>
             
       <h2>Crew Members:</h2>
-      <p style="color: #888; margin-bottom: 8px;"><i>누적 Marathon 점수별로 보여집니다.</i></p>
+
+      <div class="accordion" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button id="marathonDistBtn" class="accordion-button collapsed align-middle" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <p><i>누적 Marathon 점수별로 보여집니다.</i> <u>Marathon 분포 보기</u></p>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div id="chartCont" style="margin: 12px 12px 24px 12px;"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+
         
       <div id="memberRank"> </div>
 
@@ -91,7 +110,12 @@
 
     </div>
     
-
+    <script> //Bounding Rect
+      const width = document.getElementById("marathonDistBtn").getBoundingClientRect().width;
+      document.getElementById("chartCont").insertAdjacentHTML("beforeEnd", `
+      <svg width="`+ (width - 20) + `" height="200"></svg>
+      `);
+    </script>
 
     <script type="module">
       //  데이터를 두 파일로 나눠놓은 이유: 업데이트의 용이함.
@@ -102,6 +126,14 @@
         import c from "/src/component.js";
         import u from "/src/user.js";
         import l from "/src/log.js";
+
+
+
+        document.getElementById("navBar").insertAdjacentHTML("beforeEnd", c['navBar']);
+
+        document.getElementById("nextRun").insertAdjacentHTML("beforeEnd", c['nextRun']);
+
+        document.getElementById("footer").insertAdjacentHTML("beforeEnd", c['footer']);
 
         // console.log(u[0]['uid']);
         // console.log(u[0]['badge'][0]);
@@ -125,11 +157,8 @@
           return b.marathon - a.marathon;
         });
 
-        document.getElementById("navBar").insertAdjacentHTML("beforeEnd", c['navBar']);
-
-        document.getElementById("nextRun").insertAdjacentHTML("beforeEnd", c['nextRun']);
-
-        document.getElementById("footer").insertAdjacentHTML("beforeEnd", c['footer']);
+        const data = rank ;
+        delete data[0].marathon;
 
         
 
@@ -196,6 +225,49 @@
           };
 
           memberRank();
+
+          function chart(){
+            // var svg = d3.select("svg"),
+              // margin = {top: 20, right: 20, bottom: 30, left: 40},
+            //   width = svg.attr("width"),
+            //   height = svg.attr("height");
+            var svg = d3.select("svg"),
+              margin = {top: 20, right: 40, bottom: 30, left: 40},
+              width = svg.attr("width"),
+              height = svg.attr("height");
+
+            var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+              y = d3.scaleLinear().rangeRound([height, 0]);
+          
+           var g = svg.append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          
+            x.domain(data.map(function(d) { return d.uid; }));
+            y.domain([0, d3.max(data, function(d) { return d.marathon; })]);
+        
+          
+            g.append("g")
+                .attr("class", "axis axis--y")
+                .call(d3.axisLeft(y).tickValues([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85]).tickFormat(function(t) { return t + "K"; }))
+              .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "0.71em")
+                .attr("text-anchor", "end")
+                .text("marathon");
+          
+            g.selectAll(".bar")
+              .data(data)
+              .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return x(d.uid); })
+                .attr("y", function(d) { return y(d.marathon); })
+                .attr("width", x.bandwidth())
+                .attr("height", function(d) { return height - y(d.marathon); });
+         
+          }
+
+          chart();
 
         </script>
 

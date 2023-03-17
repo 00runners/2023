@@ -19,6 +19,39 @@ body{
 h2{
     font-family: 'Roboto Mono';
 }
+.accordion-item{
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.accordion-button{
+   background-color: transparent !important;
+   padding: 0px !important;
+   color: #888 !important;
+   vertical-align: sub !important;
+   
+}
+.accordion-body{
+    padding: 0px !important;
+}
+
+.bar {
+     fill: rgb(225, 225, 225);
+}
+.axis--x path {
+        display: none;
+}
+.axis--y .tick{
+    stroke: white;
+    fill: white;
+    font-family: 'Roboto Mono';
+    font-size: 0.9rem;
+}
+.axis--y path{
+    display: none;
+}
+
+
+
 #animated-text{
     animation: text-color 2s ease-in-out infinite;
 }

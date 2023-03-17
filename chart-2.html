@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+</head>
+<style>
+
+    .bar {
+      fill: rgb(30, 30, 30);
+    }
+    
+    .bar:hover {
+      fill: rgb(167, 0, 0);
+    }
+    
+    .axis--x path {
+      display: none;
+    }
+    
+    </style>
+<body>
+    <svg width="500" height="300"></svg> 
+    <svga width="500" height="300"><svga>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="module">
+
+        // import {min} from "https://cdn.skypack.dev/d3-array@3";
+
+        import c from "/src/component.js";
+        import u from "/src/user.js";
+        import l from "/src/log.js";
+
+        // console.log(u[0]['uid']);
+        // console.log(u[0]['badge'][0]);
+        // console.log(u);
+
+        // **** mSum 산출 ****
+        let mSum = l.reduce(function(acc, item) {
+          if (!acc[item.uid]) {
+            acc[item.uid] = 0;
+          }
+          acc[item.uid] += item.marathon;
+          return acc;
+        }, {});
+
+        // **** mSum 순서대로 정렬 ****
+        const rank = Object.keys(mSum).map(function(key) {
+          return {uid: key, marathon: mSum[key]};
+        });
+        rank.sort(function(a, b) {
+          return b.marathon - a.marathon;
+        });
+
+      const data = rank ;
+      delete data[0].marathon;
+
+      console.log(data);
+
+
+    
+    var svg = d3.select("svg"),
+        margin = {top: 20, right: 20, bottom: 30, left: 40},
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom;
+    
+    var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
+        y = d3.scaleLinear().rangeRound([height, 0]);
+    
+    var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
+      x.domain(data.map(function(d) { return d.uid; }));
+      y.domain([0, d3.max(data, function(d) { return d.marathon; })]);
+  
+    
+      g.append("g")
+          .attr("class", "axis axis--y")
+          .call(d3.axisLeft(y).tickValues([0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85]).tickFormat(function(t) { return t + "K"; }))
+        .append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 6)
+          .attr("dy", "0.71em")
+          .attr("text-anchor", "end")
+          .text("marathon");
+    
+      g.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+          .attr("class", "bar")
+          .attr("x", function(d) { return x(d.uid); })
+          .attr("y", function(d) { return y(d.marathon); })
+          .attr("width", x.bandwidth())
+          .attr("height", function(d) { return height - y(d.marathon); });
+    // });
+    
+    </script>
+</body>
+</html>
