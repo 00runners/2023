@@ -460,7 +460,7 @@ export default[
         "uid": 77,
         "name": "염태선",
         "instagram": "",
-        "badge": ""
+        "badge": ["Pacer"]
       },
       {
         "uid": 78,
@@ -622,6 +622,30 @@ export default[
         "uid": 104,
         "name": "허범현",
         "instagram": "h_bum_h",
+        "badge": ""
+      },
+      {
+        "uid": 105,
+        "name": "김혜인B",
+        "instagram": "hyen.1599",
+        "badge": ""
+      },
+      {
+        "uid": 106,
+        "name": "진수아",
+        "instagram": "su.0_0.a",
+        "badge": ""
+      },
+      {
+        "uid": 107,
+        "name": "조연우",
+        "instagram": "yeonwoo___woo",
+        "badge": ""
+      },
+      {
+        "uid": 108,
+        "name": "최다현",
+        "instagram": "dhycember",
         "badge": ""
       }
 ] 

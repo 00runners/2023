@@ -10,6 +10,12 @@ body{
     background-color: #131313;
     color: white;
 }
+
+.carousel-caption{
+    bottom: 0px !important;
+    line-height: 0px !important;
+    font-family: 'Roboto Mono';
+}
 h2{
     font-family: 'Roboto Mono';
 }
