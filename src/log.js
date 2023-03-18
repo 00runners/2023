@@ -1272,5 +1272,12 @@ export default[
       "month": "3월",
       "sessionName": "KRW 이벤트 러닝 by Nike",
       "marathon": 5
-    }
+    },
+    {
+      "uid": 36,
+      "lid": 181,
+      "month": "3월",
+      "sessionName": "광화문-청계천 정규런",
+      "marathon": 5
+    },
   ]
