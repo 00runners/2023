@@ -1274,6 +1274,13 @@ export default[
       "marathon": 5
     },
     {
+      "uid": 36,
+      "lid": 181,
+      "month": "3월",
+      "sessionName": "광화문-청계천 정규런",
+      "marathon": 5
+    },
+    {
       "uid": 74,
       "lid": 181,
       "month": "3월",
@@ -1441,4 +1448,5 @@ export default[
       "sessionName": "석촌호수 정규런",
       "marathon": 5
     }
+
   ]
