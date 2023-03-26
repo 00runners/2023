@@ -17,10 +17,10 @@ export default {
 
   "nextRun" :
 ` <h2 style="margin-bottom: 16px;">Next Run:</h2>
-  <p style="text-align: center; line-height: 60%;">3/24 (금)</p>
-  <p style="text-align: center; line-height: 60%; font-size: 1.6rem;"><b>석촌호수 5K</b></p>
+  <p style="text-align: center; line-height: 60%;">3/31 (금)</p>
+  <p style="text-align: center; line-height: 60%; font-size: 1.6rem;"><b>용기런 공덕 5K</b></p>
   <p id="animated-text" style="text-align: center; line-height: 80%; font-size: 0.8rem;">멤버 참가신청 예정 → 공지방 확인</p>
-  <p style="text-align: center; line-height: 0%; font-size: 0.8rem; color: #555">게스트 신청 → 수요일 오후 6시 오픈</p>`,
+  <p style="text-align: center; line-height: 0%; font-size: 0.8rem; color: #888">"Members Only"</p>`,
 
   "footer" : 
   `<section id="footer" style="font-family: 'Roboto Mono'; text-align: center; color: grey;">

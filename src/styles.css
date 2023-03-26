@@ -12,7 +12,6 @@ body{
 }
 
 .carousel-caption{
-    bottom: 0px !important;
     line-height: 0px !important;
     font-family: 'Roboto Mono';
 }

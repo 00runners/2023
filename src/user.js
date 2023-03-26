@@ -268,7 +268,7 @@ export default[
         "uid": 45,
         "name": "최한결",
         "instagram": "choehangyeol",
-        "badge": ""
+        "badge": ["Pacer"]
       },
       {
         "uid": 46,
@@ -646,6 +646,12 @@ export default[
         "uid": 108,
         "name": "최다현",
         "instagram": "dhycember",
+        "badge": ""
+      },
+      {
+        "uid": 109,
+        "name": "박도연",
+        "instagram": "dodo_0eny",
         "badge": ""
       }
 ] 
