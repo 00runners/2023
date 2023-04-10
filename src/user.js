@@ -653,5 +653,17 @@ export default[
         "name": "박도연",
         "instagram": "dodo_0eny",
         "badge": ""
+      },
+      {
+        "uid": 110,
+        "name": "이주환",
+        "instagram": "_5.17_",
+        "badge": ""
+      },
+      {
+        "uid": 111,
+        "name": "윤성준",
+        "instagram": "sj_plank",
+        "badge": ""
       }
 ] 

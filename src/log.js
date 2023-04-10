@@ -1002,6 +1002,13 @@ export default[
     },
     {
       "uid": 1,
+      "lid": 141,
+      "month": "3월",
+      "sessionName": "올림픽공원 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 1,
       "lid": 142,
       "month": "3월",
       "sessionName": "광화문-청계천 정규런",
@@ -1699,5 +1706,131 @@ export default[
       "month": "3월",
       "sessionName": "공덕 용기런",
       "marathon": 10
+    },
+    {
+      "uid": 17,
+      "lid": 240,
+      "month": "3월",
+      "sessionName": "공덕 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 80,
+      "lid": 241,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 33,
+      "lid": 242,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 16,
+      "lid": 243,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 17,
+      "lid": 244,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 5,
+      "lid": 245,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 32,
+      "lid": 246,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 111,
+      "lid": 247,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 110,
+      "lid": 248,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 15,
+      "lid": 249,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 34,
+      "lid": 250,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 92,
+      "lid": 251,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 100,
+      "lid": 252,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 2,
+      "lid": 253,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 1,
+      "lid": 254,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 78,
+      "lid": 255,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 46,
+      "lid": 256,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 13,
+      "lid": 257,
+      "month": "4월",
+      "sessionName": "반포 정규런",
+      "marathon": 5
     }
 ]
