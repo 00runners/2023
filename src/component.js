@@ -18,9 +18,9 @@ export default {
   "nextRun" :
 ` <h2 style="margin-bottom: 16px;">Next Run:</h2>
   <p style="text-align: center; line-height: 60%;">4/21 (금)</p>
-  <p style="text-align: center; line-height: 80%; font-size: 1.6rem;"><b>서울대 트랙 5K</b></p>
-  <p id="animated-text" style="text-align: center; line-height: 80%; font-size: 0.8rem;">멤버 참가신청 → 공지방 확인</p>
-  <p style="text-align: center; line-height: 0%; font-size: 0.8rem; color: #888">게스트 신청 → 인스타그램 확인</p>`,
+  <p style="text-align: center; line-height: 80%; font-size: 1.6rem;"><b>잠실-삼성역 5K</b></p>
+  <p id="animated-text" style="text-align: center; line-height: 80%; font-size: 0.8rem;">멤버 참가신청 예정 → 공지방 확인</p>
+  <p style="text-align: center; line-height: 0%; font-size: 0.8rem; color: #888">게스트 신청 → 수요일 인스타그램에서 오픈 예정</p>`,
 
   "footer" : 
   `<section id="footer" style="font-family: 'Roboto Mono'; text-align: center; color: grey;">
