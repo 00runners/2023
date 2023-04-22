@@ -665,5 +665,29 @@ export default[
         "name": "윤성준",
         "instagram": "sj_plank",
         "badge": ""
+      },
+      {
+        "uid": 112,
+        "name": "주현우",
+        "instagram": "hyun_x00",
+        "badge": ""
+      },
+      {
+        "uid": 113,
+        "name": "박동겸",
+        "instagram": "8arkcozyboy",
+        "badge": ""
+      },
+      {
+        "uid": 114,
+        "name": "차승연",
+        "instagram": "_yeonee_e",
+        "badge": ""
+      },
+      {
+        "uid": 115,
+        "name": "정문기",
+        "instagram": "spencer_jeong",
+        "badge": ""
       }
 ] 
