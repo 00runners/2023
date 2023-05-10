@@ -478,7 +478,7 @@ export default[
         "uid": 80,
         "name": "배태진",
         "instagram": "taejin.0_0",
-        "badge": ""
+        "badge": ["King"]
       },
       {
         "uid": 81,
@@ -688,6 +688,12 @@ export default[
         "uid": 115,
         "name": "정문기",
         "instagram": "spencer_jeong",
+        "badge": ""
+      },
+      {
+        "uid": 116,
+        "name": "민동진",
+        "instagram": "dj_min7",
         "badge": ""
       }
 ] 

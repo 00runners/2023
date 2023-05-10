@@ -273,13 +273,6 @@ export default[
       "marathon": 5
     },
     {
-      "uid": "#N/A",
-      "lid": 40,
-      "month": "3월",
-      "sessionName": "옥수 오픈런",
-      "marathon": 5
-    },
-    {
       "uid": 29,
       "lid": 41,
       "month": "3월",
@@ -721,13 +714,6 @@ export default[
       "marathon": 5
     },
     {
-      "uid": "#N/A",
-      "lid": 104,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
       "uid": 17,
       "lid": 105,
       "month": "3월",
@@ -749,13 +735,6 @@ export default[
       "marathon": 5
     },
     {
-      "uid": "#N/A",
-      "lid": 108,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
       "uid": 80,
       "lid": 109,
       "month": "3월",
@@ -770,36 +749,8 @@ export default[
       "marathon": 5
     },
     {
-      "uid": "#N/A",
-      "lid": 111,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
       "uid": 8,
       "lid": 112,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
-      "uid": "#N/A",
-      "lid": 113,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
-      "uid": "#N/A",
-      "lid": 114,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
-      "uid": "#N/A",
-      "lid": 115,
       "month": "3월",
       "sessionName": "올림픽공원 정규런",
       "marathon": 5
@@ -849,13 +800,6 @@ export default[
     {
       "uid": 19,
       "lid": 122,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
-      "uid": "#N/A",
-      "lid": 123,
       "month": "3월",
       "sessionName": "올림픽공원 정규런",
       "marathon": 5
@@ -961,20 +905,6 @@ export default[
     {
       "uid": 2,
       "lid": 138,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
-      "uid": "#N/A",
-      "lid": 139,
-      "month": "3월",
-      "sessionName": "올림픽공원 정규런",
-      "marathon": 5
-    },
-    {
-      "uid": "#N/A",
-      "lid": 140,
       "month": "3월",
       "sessionName": "올림픽공원 정규런",
       "marathon": 5
@@ -2090,6 +2020,160 @@ export default[
       "lid": 299,
       "month": "4월",
       "sessionName": "서울대 정규런",
+      "marathon": 5
+    },
+    {
+    "uid": 69,
+    "lid": 296,
+    "month": "4월",
+    "sessionName": "삼성-잠실 용기런",
+    "marathon": 10
+    },
+    {
+      "uid": 24,
+      "lid": 297,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 106,
+      "lid": 298,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 6,
+      "lid": 299,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 33,
+      "lid": 300,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 77,
+      "lid": 301,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 100,
+      "lid": 302,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 18,
+      "lid": 303,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 80,
+      "lid": 304,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 63,
+      "lid": 305,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 13,
+      "lid": 306,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 52,
+      "lid": 307,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 92,
+      "lid": 308,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 49,
+      "lid": 309,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 32,
+      "lid": 310,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 74,
+      "lid": 311,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 25,
+      "lid": 312,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 78,
+      "lid": 313,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 116,
+      "lid": 314,
+      "month": "3월",
+      "sessionName": "올림픽공원 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 116,
+      "lid": 315,
+      "month": "4월",
+      "sessionName": "서울대 정규런",
+      "marathon": 5
+    },
+    {
+      "uid": 116,
+      "lid": 316,
+      "month": "4월",
+      "sessionName": "삼성-잠실 용기런",
+      "marathon": 10
+    },
+    {
+      "uid": 66,
+      "lid": 317,
+      "month": "3월",
+      "sessionName": "광화문-청계천 정규런",
       "marathon": 5
     }
 ]
