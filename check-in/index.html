@@ -6,56 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="font.css">
-    <title>00runners Check-in</title>
+    <script src="src/paper.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    
+    <title>INDEX COPY</title>
 </head>
-<body style="font-family: Pretendard;">
+<body style="font-family: Pretendard; background-color: black;">
+    
 
-    <div class="marquee-container">
-    <div class="marquee">
-        <span>Young Runners On The Road • 00runners </span>
-        <span>• Young Runners On The Road • 00runners</span>
-        <span> • Young Runners On The Road • 00runners •</span>
-        <span> Young Runners On The Road • 00runners</span>
-        <span> • Young Runners On The Road • 00runners •</span>
-        <span> Young Runners On The Road • 00runners</span>
-        <span> • Young Runners On The Road • 00runners •</span>
-    </div>
-    <div class="marquee marquee2">
-        <span>Young Runners On The Road • 00runners </span>
-        <span>• Young Runners On The Road • 00runners</span>
-        <span> • Young Runners On The Road • 00runners •</span>
-        <span> Young Runners On The Road • 00runners</span>
-        <span> • Young Runners On The Road • 00runners •</span>
-        <span> Young Runners On The Road • 00runners</span>
-        <span> • Young Runners On The Road • 00runners •</span>
-    </div>
+    <div class="canvas" style="z-index: 0; position: fixed; top: 0px">
+    <canvas resize="true" hidpi="off" id="canvas-1" style="opacity: 60%; background:black; width: 100vw; height: 100vh; margin: -10px;"></canvas>
     </div>
 
 
-    <div class="qrBox" style="text-align: center;">
-        <img src="Check-in V1.png" style="width: 80%;" alt="qr">
-    </div>
 
+    <div class="qrBox" style="text-align: center; z-index: 1; position: fixed; height: 100%;">
 
-    <div class="marquee-container cont2">
-        <div class="marqueeB">
-            <span>Young Runners On The Road • 00runners </span>
-            <span>• Young Runners On The Road • 00runners</span>
-            <span> • Young Runners On The Road • 00runners •</span>
-            <span> Young Runners On The Road • 00runners</span>
-            <span> • Young Runners On The Road • 00runners •</span>
-            <span> Young Runners On The Road • 00runners</span>
-            <span> • Young Runners On The Road • 00runners •</span>
+        <div style="position: relative; width: 90%; top: 42%;  -ms-transform: translateY(-50%);
+        transform: translateY(-50%); margin: auto;">
+
+        <h2 style="margin-bottom: 4px; color: white; opacity: 80%;">Welcome!</h2>
+        <h4 style="color: white; font-weight: 400; opacity: 80%; margin-top: 0px;">QR코드를 스캔하여 체크인</h3>
+
+         <img src="Check-in V1.png" style=" width: 65%;" alt="qr">
+
+        
         </div>
-        <div class="marqueeB marquee2">
-            <span>Young Runners On The Road • 00runners </span>
-            <span>• Young Runners On The Road • 00runners</span>
-            <span> • Young Runners On The Road • 00runners •</span>
-            <span> Young Runners On The Road • 00runners</span>
-            <span> • Young Runners On The Road • 00runners •</span>
-            <span> Young Runners On The Road • 00runners</span>
-            <span> • Young Runners On The Road • 00runners •</span>
+
+        <div style="color: white; font-family: 'Roboto Mono'; width: 100%; opacity: 40%; position: absolute; bottom: 100px; text-align: center !important;">
+            <h4>00runners</h4>
         </div>
-        </div>
+    </div>
+
+    
+
+<script type="text/paperscript" canvas="canvas-1">
+    var point = view.center;
+
+    var colors = [];
+    var cycles = 1;
+    for (var i = 0, l = 60; i < l; i++) {
+        var brightness = 1 - (i / l) * 1.5;
+        var hue = i / l * cycles * 180;
+        var color = {
+            hue: hue,
+            saturation: 1,
+            brightness: brightness
+        };
+        colors.push(color);
+    }
+
+    var radius = Math.max(view.size.width, view.size.height) * 0.05;
+
+    var path = new Path.Rectangle({
+        rectangle: view.bounds,
+        fillColor: {
+            origin: point,
+            destination: point + [radius, 0],
+            gradient: {
+                stops: colors,
+                radial: true
+            }
+        }
+    });
+
+    var color = path.fillColor;
+    var gradient = color.gradient;
+    var mouseDown = false;
+    var mousePoint = view.center;
+
+    function onMouseDown(event) {
+        mouseDown = true;
+        mousePoint = event.point;
+    }
+
+    function onMouseDrag(event) {
+        mousePoint = event.point;
+    }
+
+    function onMouseUp(event) {
+        vector.length = 10;
+        mouseDown = false;
+    }
+
+    var grow = false;
+    var vector = new Point(150, 0);
+
+    function onFrame() {
+        for (var i = 0, l = gradient.stops.length; i < l; i++)
+            gradient.stops[i].color.hue -= 2;
+        if (grow && vector.length > 300) {
+            grow = false;
+        } else if (!grow && vector.length < 75) {
+            grow = true;
+        }
+        if (mouseDown) {
+            point = point + (mousePoint - point) / 10;
+        } else {
+            vector.length += (grow ? 1 : -1);
+            vector.angle += 3;
+        }
+        color.highlight = mouseDown ? point : point + vector;
+    }
+
+    function onResize(event) {
+        point = view.center;
+        path.bounds = view.bounds;
+        var color = path.fillColor;
+        color.origin = point;
+        var radius = Math.max(view.size.width, view.size.height) * 0.75;
+        color.destination = point + [radius, 0];
+    }
+</script>
 </body>
 </html>
