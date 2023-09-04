@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- fonts -->
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="fonts" href="src/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<title>work in progress ...</title>
+</head>
+<style>
+    #show-more-button {
+            background-color: white !important;
+            color: black;
+            /* padding: 10px 20px; */
+            border: none;
+            cursor: pointer;
+        }
+</style>
+<body style="font-family: 'Roboto Mono';">
+    <div class="navbar-custom position-absolute" style="width: 100%; background-color: white; display: flex;">
+        
+
+        <div style="z-index: 1; position: fixed;" class="p-2">
+            <a href="" style="text-decoration: none; color: black;">00runners</a><br>23H2 Recruiting
+
+        </div>
+
+        <div class="position-fixed end-0" style="padding-top: 10px; text-align: right; background-color: white; z-index: 0;">
+            <div style="padding-right: 1rem">
+            <a href="">지원하기</a> <br>
+            <button id="show-more-button">menu</button>
+            <div id="more-content" style="display: none;">
+                <hr>
+                The Crew<br>Run Session<br>Course<br>Partners<br>Pacer & HQ<br>Apply<br>Questions
+            </div>
+            </div>
+
+            <hr style="width: 100vw; margin: 6px 0px; border: 1px solid #131313; opacity: 100%;">
+
+        </div>
+
+    </div>  
+  
+    <div class="lorem">
+        <br><br><br><br><br><br><br><br>
+        <h2>The Crew</h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra, velit at iaculis pellentesque, nulla odio gravida urna, a tincidunt nunc metus quis libero. Vivamus auctor odio eu sollicitudin. Sed nec est eget leo varius cursus. Maecenas viverra interdum tellus vel suscipit. Integer nec turpis eu quam auctor dictum. Nulla facilisi. Nullam ut massa non quam varius feugiat. Donec at ligula tincidunt, vehicula tortor id, vehicula velit. Sed mattis, libero a pharetra auctor, tellus urna tincidunt sapien, in eleifend leo eros eu sem. Sed vel enim nec tortor sodales auctor. Integer consectetur, dui sit amet hendrerit blandit, justo velit convallis nisl, sit amet semper purus arcu et ante.
+        <h2>The Crew</h2>
+        Suspendisse potenti. Fusce scelerisque aliquam dolor, sit amet ullamcorper tortor pharetra non. Vestibulum tempus urna in ex dignissim, ut consequat libero interdum. Nullam aliquam id leo eget vehicula. Vivamus fermentum justo sed bibendum cursus. Nulla eget urna a massa bibendum blandit vel sit amet urna. Aliquam erat volutpat. Proin luctus, dolor ac aliquet suscipit, odio libero bibendum urna, sit amet scelerisque justo urna a arcu. Maecenas ac lacus id massa cursus convallis. Nunc ac justo sit amet justo venenatis pharetra. Aliquam bibendum, lectus et varius elementum, leo odio ullamcorper dui, ut aliquam est ex id tortor.
+        <h2>The Crew</h2>
+        Nunc sollicitudin est quis tortor auctor hendrerit. Aenean nec nisl vel quam fringilla volutpat ac vel urna. Vivamus sit amet justo in nulla eleifend feugiat at a elit. Sed nec libero sit amet erat gravida hendrerit. Integer tincidunt lacus nec libero laoreet, at congue justo laoreet. Aenean
+        <h2>The Crew</h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra, velit at iaculis pellentesque, nulla odio gravida urna, a tincidunt nunc metus quis libero. Vivamus auctor odio eu sollicitudin. Sed nec est eget leo varius cursus. Maecenas viverra interdum tellus vel suscipit. Integer nec turpis eu quam auctor dictum. Nulla facilisi. Nullam ut massa non quam varius feugiat. Donec at ligula tincidunt, vehicula tortor id, vehicula velit. Sed mattis, libero a pharetra auctor, tellus urna tincidunt sapien, in eleifend leo eros eu sem. Sed vel enim nec tortor sodales auctor. Integer consectetur, dui sit amet hendrerit blandit, justo velit convallis nisl, sit amet semper purus arcu et ante.
+        <h2>The Crew</h2>
+        Suspendisse potenti. Fusce scelerisque aliquam dolor, sit amet ullamcorper tortor pharetra non. Vestibulum tempus urna in ex dignissim, ut consequat libero interdum. Nullam aliquam id leo eget vehicula. Vivamus fermentum justo sed bibendum cursus. Nulla eget urna a massa bibendum blandit vel sit amet urna. Aliquam erat volutpat. Proin luctus, dolor ac aliquet suscipit, odio libero bibendum urna, sit amet scelerisque justo urna a arcu. Maecenas ac lacus id massa cursus convallis. Nunc ac justo sit amet justo venenatis pharetra. Aliquam bibendum, lectus et varius elementum, leo odio ullamcorper dui, ut aliquam est ex id tortor.
+        <h2>The Crew</h2>
+        Nunc sollicitudin est quis tortor auctor hendrerit. Aenean nec nisl vel quam fringilla volutpat ac vel urna. Vivamus sit amet justo in nulla eleifend feugiat at a elit. Sed nec libero sit amet erat gravida hendrerit. Integer tincidunt lacus nec libero laoreet, at congue justo laoreet. Aenean
+
+    </div>
+
+
+
+    <script>
+        document.getElementById("show-more-button").addEventListener("click", function() {
+            var moreContent = document.getElementById("more-content");
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "block";
+                document.getElementById("show-more-button").textContent = "hide";
+            } else {
+                moreContent.style.display = "none";
+                document.getElementById("show-more-button").textContent = "menu";
+            }
+        });
+    </script>
+
+</body>
+</html>

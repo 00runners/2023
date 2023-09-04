@@ -695,5 +695,29 @@ export default[
         "name": "민동진",
         "instagram": "dj_min7",
         "badge": ""
+      },
+      {
+        "uid": 117,
+        "name": "이소연",
+        "instagram": "dus_dll",
+        "badge": ""
+      },
+      {
+        "uid": 118,
+        "name": "박준혁",
+        "instagram": "11junhyeok10",
+        "badge": ""
+      },
+      {
+        "uid": 119,
+        "name": "이세비",
+        "instagram": "li_s.bi00",
+        "badge": ""
+      },
+      {
+        "uid": 120,
+        "name": "김승민",
+        "instagram": "seungmini_k",
+        "badge": ""
       }
 ] 
