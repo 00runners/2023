@@ -51,6 +51,11 @@
         border-top-right-radius: 0px !important;
     }
 </style>
+      <script>
+        setTimeout(function() {
+        location.reload(); 
+        }, 3000); 
+    </script>
 </head>
 
 <body style="font-family: 'Roboto Mono';">
@@ -382,7 +387,7 @@
             var targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                var offset = 280; 
+                var offset = 200; 
                 var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
                 window.scrollTo({
                 top: targetPosition - offset,
@@ -393,12 +398,6 @@
         }
         });
         
-    </script>
-
-      <script>
-        setTimeout(function() {
-        location.reload(); 
-        }, 3000); 
     </script>
 
 </body>
