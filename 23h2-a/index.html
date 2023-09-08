@@ -24,14 +24,14 @@
 </head>
 <style>
     #show-more-button {
-            background-color: white !important;
-            color: black;
+            background-color: #131313 !important;
+            color: white;
             /* padding: 10px 20px; */
             border: none;
             cursor: pointer;
         }
     .custom-anchor{
-        color: black;
+        color: white;
     }
     .card{
         border: none;
@@ -39,8 +39,11 @@
     .card-body{
         padding: 0px;
         font-size: smaller;
-        color: rgb(189, 189, 189);
+        color: rgb(78, 78, 78);
         font-style: italic;
+    }
+    .card-text{
+        background-color: #131313 !important;
     }
     .row{
         margin-bottom: 10px;
@@ -50,21 +53,24 @@
         border-top-left-radius: 0px !important;
         border-top-right-radius: 0px !important;
     }
+    .toast-body{
+        color: black;
+    }
 </style>
 </head>
 
-<body style="font-family: 'Roboto Mono';">
-    <div class="navbar-custom position-absolute" style="width: 100%; background-color: white; display: flex; font-weight: 500; font-size: 1.4rem; z-index: 100;">
+<body style="font-family: 'Roboto Mono'; background-color: #131313; color: white">
+    <div class="navbar-custom position-absolute" style="width: 100%; background-color: #131313; display: flex; font-weight: 500; font-size: 1.4rem; z-index: 100;">
         
 
         <div style="z-index: 1; position: fixed;" class="p-2">
-            <a href="" style="text-decoration: none; color: black;">00runners</a><br>23H2 Recruiting
+            <a href="" style="text-decoration: none; color: white;">00runners</a><br>23H2 Recruiting
             <a id="soundOn" onclick="playSound()"><img src="src/speaker-high-volume.png" width="22px" alt=""></a>
             <a id="soundOff" style="display: none;" onclick="stopSound()"><img src="src/muted-speaker.png" width="22px" alt=""></a>
 
         </div>
 
-        <div class="position-fixed end-0" style="padding-top: 10px; text-align: right; background-color: white; z-index: 0;">
+        <div class="position-fixed end-0" style="padding-top: 10px; text-align: right; background-color: #131313; z-index: 0;">
             <div style="padding-right: 1rem">
             <a href="#apply" class="custom-anchor" style="color: #0d6efd !important; text-decoration: none;">가입하기</a> <br>
             <button id="show-more-button" style="font-weight: 500;">menu</button>
@@ -81,7 +87,7 @@
             </div>
             </div>
             <div class="border-div" style="width: 100vw; margin-top: 16px; margin-bottom: 0px; padding: 0 8px;">
-            <hr style="border:0.5px solid #131313; opacity:100%;margin: 0px">
+            <hr style="border:0.5px solid white; opacity:100%;margin: 0px">
             </div>
         </div>
 
@@ -344,7 +350,7 @@
         <br><br><br><br><br><br>
 
         
-        <div class="footer" style="color: rgb(189, 189, 189); text-align: center;">
+        <div class="footer" style="color: rgb(78, 78, 78); text-align: center;">
             <hr><br>
             "용기를 가지고 달려요!"<br>
             00runners<br><br>
@@ -353,7 +359,7 @@
             Special thanks to @yoo.koon and @eseoabo for wonderful photos.</small>
             <br><br>
             <small style="font-size: 0.7rem;">
-            Song: KHEMIS, Coopex, ZANA - <a href="https://ncs.io/TidalWave" style="color: rgb(189, 189, 189)">Tidal Wave [NCS Release]</a><br>
+            Song: KHEMIS, Coopex, ZANA - <a href="https://ncs.io/TidalWave" style="color: rgb(78, 78, 78)">Tidal Wave [NCS Release]</a><br>
             Music provided by NoCopyrightSounds<br>
             </small>
             <br><br><br><br><br>
