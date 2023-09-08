@@ -59,6 +59,8 @@
 
         <div style="z-index: 1; position: fixed;" class="p-2">
             <a href="" style="text-decoration: none; color: black;">00runners</a><br>23H2 Recruiting
+            <a id="soundOn" onclick="playSound()"><img src="src/speaker-high-volume.png" width="22px" alt=""></a>
+            <a id="soundOff" style="display: none;" onclick="stopSound()"><img src="src/muted-speaker.png" width="22px" alt=""></a>
 
         </div>
 
@@ -349,6 +351,11 @@
             <small>
             This page was designed/developed by 박종한, Crew Leader<br>
             Special thanks to @yoo.koon and @eseoabo for wonderful photos.</small>
+            <br><br>
+            <small style="font-size: 0.7rem;">
+            Song: KHEMIS, Coopex, ZANA - <a href="https://ncs.io/TidalWave" style="color: rgb(189, 189, 189)">Tidal Wave [NCS Release]</a><br>
+            Music provided by NoCopyrightSounds<br>
+            </small>
             <br><br><br><br><br>
         </div>
 
@@ -372,12 +379,28 @@
   </div>
 </div>
 
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="musicToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <!-- <img src="..." class="rounded me-2" alt="..."> -->
+        <strong class="me-auto">00runners</strong>
+        <small>now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        음악이 시작되었어.. 뛰러 나가고 싶지 않아?
+      </div>
+    </div>
+  </div>
+
 
     
 
     <script>
-          const toastLiveExample = document.getElementById('liveToast')
-          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+          const toastLiveExample = document.getElementById('liveToast');
+          const musicToastLiveExample = document.getElementById('musicToast');
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+          const musicToastBootstrap = bootstrap.Toast.getOrCreateInstance(musicToastLiveExample);
 
         setTimeout(function() {
             toastBootstrap.show(); // 페이지 새로 고침
@@ -418,25 +441,30 @@
         }
         });
 
+        var audio; // 오디오 객체를 저장할 변수
+
+        // 소리를 재생하는 함수
+        function playSound() {
+        audio = new Audio('src/KHEMIS, Coopex, ZANA - Tidal Wave [NCS Release].mp3'); // 소리 파일 경로를 지정해야 합니다.
+        audio.play();
+        document.getElementById('soundOn').style.display = 'none'; // "Sound On" 버튼 숨기기
+        document.getElementById('soundOff').style.display = 'inline-block'; // "Sound Off" 버튼 보이기
+        musicToastBootstrap.show();
+        }
+
+        // 소리를 중지하는 함수
+        function stopSound() {
+        if (audio) {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+        document.getElementById('soundOff').style.display = 'none'; // "Sound Off" 버튼 숨기기
+        document.getElementById('soundOn').style.display = 'inline-block'; // "Sound On" 버튼 보이기
+        }
+
       
         
     </script>
 
-        <script>
-            // // 타이머 ID를 저장할 변수
-            // var timerId;
-
-            // // 페이지 로드 후 3초 후에 새로 고침하고 타이머를 중지
-            // document.addEventListener("DOMContentLoaded", function() {
-            // timerId = setTimeout(function() {
-            //     location.reload(); // 페이지 새로 고침
-            // }, 3000); // 3초(3000밀리초) 후에 실행
-            // });
-
-            // // 사용자가 페이지를 클릭하면 타이머 중지
-            // document.addEventListener("click", function() {
-            // clearTimeout(timerId); // 타이머 중지
-            // });
-        </script>
 </body>
 </html>
