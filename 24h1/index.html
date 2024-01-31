@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta property="og:description" content="선착순으로 신청이 마감됩니다.">
+     <meta property="og:image" content="https://00runners.xyz/24h1/src/IMG_3576.JPG">
+     
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- fonts -->
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="fonts" href="src/fonts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;900&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<title>00runners 24-1 리크루팅</title>
+</head>
+<style>
+    #show-more-button {
+            background-color: #131313 !important;
+            color: white;
+            /* padding: 10px 20px; */
+            border: none;
+            cursor: pointer;
+        }
+    .custom-anchor{
+        color: white;
+    }
+    .card{
+        border: none;
+    }
+    .card-body{
+        padding: 0px;
+        font-size: smaller;
+        color: rgb(78, 78, 78);
+        font-style: italic;
+    }
+    .card-text{
+        background-color: #131313 !important;
+    }
+    .row{
+        margin-bottom: 10px;
+    }
+    /* 아래는 렌더링에 영향을 줄 수 있음:  */
+    .card-img-top{
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
+    .toast-body{
+        color: black;
+    }
+</style>
+</head>
+
+<body style="font-family: 'Roboto Mono'; background-color: #131313; color: white">
+    <div class="navbar-custom position-absolute" style="width: 100%; background-color: #131313; display: flex; font-weight: 500; font-size: 1.4rem; z-index: 100;">
+        
+
+        <div style="z-index: 1; position: fixed;" class="p-2">
+            <a href="" style="text-decoration: none; color: white;">00runners</a><br>24-1 Recruiting
+            <a id="soundOn" onclick="playSound()"><img src="src/speaker-high-volume.png" width="22px" alt=""></a>
+            <a id="soundOff" style="display: none;" onclick="stopSound()"><img src="src/muted-speaker.png" width="22px" alt=""></a>
+
+        </div>
+
+        <div class="position-fixed end-0" style="padding-top: 10px; text-align: right; background-color: #131313; z-index: 0;">
+            <div style="padding-right: 1rem">
+            <a href="#apply" class="custom-anchor" style="color: #0d6efd !important; text-decoration: none;">가입하기</a> <br>
+            <button id="show-more-button" style="font-weight: 500;">menu</button>
+            <div id="more-content" style="display: none;">
+                <hr>
+                <a href="#crew" class="custom-anchor">Crew</a>
+                <a href="#runsession" class="custom-anchor">Run Session</a>
+                <a href="#collab" class="custom-anchor">Collab</a>
+                <a href="#pacernhq" class="custom-anchor">운영진 & 페이서</a>
+                <a href="#apply" class="custom-anchor">가입</a>
+                <a href="#questions" class="custom-anchor">질문</a>
+                <!-- Crew<br>Run Session<br>Course<br>Collab<br>Pacer & HQ<br>Apply<br>Questions -->
+            </div>
+            </div>
+            <div class="border-div" style="width: 100vw; margin-top: 16px; margin-bottom: 0px; padding: 0 8px;">
+            <hr style="border:0.5px solid white; opacity:100%;margin: 0px">
+            </div>
+        </div>
+
+    </div>  
+  
+    <div class="container" style="max-width: 720px;">
+
+        <br><br><br><br><br>
+
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1440px;">
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/a4.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">@adidaskr</p>
+                    </div>
+                  </div>
+                </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+            <div class="card">
+                <img src="src/IMG_1586.JPG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">00runners</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/IMG_2486.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">00runners</p>
+                    </div>
+                  </div>
+                </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/IMG_3576.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">00runners</p>
+                    </div>
+                    </div>
+                </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/a3.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">@adidaskr</p>
+                    </div>
+                    </div>
+                    </div>
+
+
+        </div>
+
+    
+
+        <a id="crew"></a>
+     
+        <h2>00runners Crew</h2>
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 774px;"></div>
+    
+        00runners는 서울을 기반으로 활동하는, 열린 문화를 가진 젊은 러닝 크루입니다. Founder <a href="https://www.instagram.com/ki_men0725/">이기재</a>를 포함한 경희대학교 경희랑달리기 출신 멤버들이 2020년 5월 설립하여, 현재까지 회원 수와 문화, 끈끈함, 러닝 실력 등 모든 측면에서 성장을 거듭하고 있습니다. 매주 금요일 20시 서울 및 수도권의 러닝 코스를 5K정도 달리는 정규런이 열립니다. 00년생만 멤버가 될 수 있습니다. <br><br>
+
+        우리의 마스코트는 '용기'입니다. 크루 멤버이자 디자이너인 <a href="https://www.instagram.com/arte_ohrok/">오상훈</a>의 손에서 태어났습니다. '용기'는 멤버들이 태어난 연도인 '2000' 모양의 몸통과 자신감을 가진 몸짓, 용맹한 표정의 얼굴을 가지고 있습니다. 잘 뛰지 않아도 괜찮습니다. 우리와 함께 용기를 가지고 달려요!<br><br>
+
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1440px;">
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/IMG_9683.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">00runners</p>
+                    </div>
+                    </div>
+                </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+            <div class="card">
+                <img src="src/courage.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">마스코트 '용기'</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/IMG_9307.PNG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">@adidaskr</p>
+                    </div>
+                  </div>
+                </div>
+
+     
+
+
+        </div>
+
+        6개월에 한 번씩 기수를 구분해 활동하는 우리의 멤버가 되기 위해서는 신규와 재가입 여부에 상관없이 매년 3월과 9월에 열리는 멤버 리크루팅에 지원하거나, 게스트로 3번 이상 정규런에 참석해야 합니다. 2월과 9월에 열리는 멤버 리크루팅 오픈런에 지원하거나, 게스트로 4번 이상 정규런에 참석해야 합니다. 00년생만 멤버가 될 수 있고 게스트 또한 00년생만 참여할 수 있습니다. (빠른 년생은 어렵습니다) <br><br>
+
+        00runners는 소수의 운영진 친구들의 자발적 기여에 의해 운영되고 있습니다. 모든 멤버가 내는 15,000원의 6개월 회비는 전액 크루 운영을 위해 사용됩니다. 00runners 운영진은 자신의 탤런트를 활용해 러닝 커뮤니티의 발전에 기여하면서 성장할 수 있습니다.<br><br>
+
+        <a id="runsession"></a>
+        <h2>Run Sessi0n</h2>
+        A) 정규런 <br>
+        정규런은 운영진이 주관하는 정기 러닝 세션입니다. 매주 금요일 20시, 서울지역 내 다양한 코스에서 모두가 즐겁고 안전한 러닝 문화를 준수하며 추억을 만드는 달리기를 추구합니다. 거리는 대체로 4, 6km 정도이며, 참석 멤버에 따라 페이스 그룹을 나누어서 뜁니다. 러닝 코스는 매주 훈련팀의 주도 하에 선정되며 공식적으로 콜라보런을 제외하고 매회 게스트 참여가 가능합니다.<br><br>
+
+        B) 번개런 <br>
+        번개런은 정규런, 공식 행사 이외에 멤버 모두가 주최할 수 있는 비정기 러닝 세션입니다. 우리의 멤버라면 활동 기간 중 언제 어디서나 번개런을 열 수 있습니다. 주최자의 자율에 따라 정규 회원 이외의 지인이 자유롭게 참석할 수 있으나 이 경우 참가 정규 회원들의 동의를 구해야 합니다. 단, 크루장이 먼저 공지하는 예외 사항을 제외하고 크루의 정규런과 번개런을 겹쳐 주최할 수 없습니다. 일자, 시간, 장소, 집결지, 페이스 등 정보를 담은 메시지를 24-1학기 사담방에 자유롭게 공유하여 누구나 번개런을 열 수 있습니다. <br><br>
+
+        
+        C) 각종 번개 모임<br>
+        공공 안에서는 누구나 독서 모임, 등산 모임, 각종 다양한 스포츠 모임 등 다양한 번개 모임을 개최할 수 있습니다. 번개런과 마찬가지로 크루장이 먼저 공지하는 예외 사항을 제외하고 크루의 정규런과 번개 모임을 겹쳐 주최할 수 없습니다. 일자, 시간, 장소, 집결지 등 정보를 담은 메시지를 24-1학기 사담방에 자유롭게 공유하여 누구나 번개 모임을 개최할 수 있습니다. <br>※ 번개런, 번개 모임 진행 중 일어나는 불화, 분위기 저해 등의 부분에 대해서는 전적으로 주최자가 책임지게 됩니다.<br><br><br>
+
+
+        <a id="collab"></a>
+        <h2>Collab0ration</h2>
+        00runners HQ는 우리 멤버들에게 크루 활동에 대한 더 큰 가치를 제공하기 위해 협업하고 있습니다. 서울의 젊은 러닝문화를 만들어가는 저희와 함께하고 싶은 개인 또는 단체, 기업이라면 같이 이야기 나눠봅시다!! <br><br>
+    
+        - <b>당근(당근마켓)</b>: 당근모임 개발 과정에서 00runners와 협업<br>
+        - <b>러닝라이프</b>: 00runners 운영진 유니폼 지원<br>
+        - <b>아디다스</b>의 러닝화 신제품 광고 영상 촬영에 00runners 출연<br><br>
+        - <b>아디다스 스위치 포워드, 룰루레몬</b> 등 다양한 행사 참여<br><br>
+        - <b>다양한 러닝크루</b>와의 콜라보런 진행<br><br>
+        - <b>러닝 및 연말파티 협찬사</b>: 대상 마이밀 프로틴 음료, 제주맥주, 포도클럽<br><br>
+        <br>
+      
+        
+        <br><br>
+
+        <div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1440px;">
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/a6.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">@adidaskr</p>
+                    </div>
+                    </div>
+                    </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                <div class="card">
+                    <img src="src/IMG_0587.JPG" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">00runners</p>
+                    </div>
+                    </div>
+                </div>
+
+            <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+            <div class="card">
+                <img src="src/IMG_0583.JPG" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">00runners</p>
+                </div>
+              </div>
+            </div>
+
+                <div class="col-6 col-sm-4 mb-2" style="position: absolute; left: 50%; top: 0px;">
+                    <div class="card">
+                        <img src="src/hq.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        </div>
+                      </div>
+                    </div>
+
+     
+
+
+        </div>
+
+        <a id="pacernhq"></a>
+        <h2>운영진 & 페이서</h2>
+       
+        <br><b>The Pacer</b><br>
+        페이서는 00runners 정규런의 진행과 안전을 책임집니다. 준비운동, 쿨다운을 포함해 정규런 선두에서 회원들의 러닝 페이스를 조절하는 러너들입니다. 크루 멤버를 챙기는 리더십을 갖추고 3번 이상 정규런을 참여한 사람이 페이서 역할을 할 수 있습니다. 단, 크루장의 권한으로 선발될 수 있습니다.<br><br>
+        <b>The HQ</b><br>
+        운영진은 00runners의 운영을 총괄하는 기관이며 매주 수요일 23시 온라인으로 모여 회의를 진행합니다. 각 팀이 독립적으로 아이디어를 내고 결정하여 실행할 수 있는 의사결정 구조를 가지고 있습니다. 조직은 다음과 같습니다.:<br><br>
+        <ul>
+            <li><b>운영팀</b>: 운영 제반 사항 총괄, 멤버/운영비 관리, 이벤트 및 협업 사항 총괄</li>
+            <li><b>훈련팀</b>: 페이서 관리, 정규런 일정 및 코스 관리</li>
+            <li><b>디자인팀</b>: 브랜딩, 굿즈, 소셜미디어 등 매체에 필요한 디지털/피지컬 디자인 제작</li>
+            <li><b>SNS팀</b>: 소셜 미디어 콘텐츠 게시 및 제작, 소통 전달</li> 
+        </ul> 
+        <b>역대 회장 </b><br>
+        파운더/1대 크루 리더 이기재<br>
+        2대 크루 리더 송채림<br>
+        3대 크루 리더 박종한<br>
+        4대 크루 리더 송채림<br>
+
+        <br><br>
+        
+        <a id="apply"></a>
+        <h2>가입</h2>
+        가입비 입금 후 오픈런 5번 중 2번 이상 참석한 사람에 한에 가입이 가능합니다. 입금 순으로 선착순 인원이 집계되며, 모집 정원에 도달하면 자동으로 마감됩니다. 게스트의 경우 4회 정규런 참여 및 러닝 인증 1회 이상한 참석자에 한해 가입이 가능합니다.<br>
+        <br>
+        <div class="btn-cont" style="text-align: center;">
+        <a href="https://tally.so/r/nPOx51">
+        <button type="button" class="btn btn-primary">신청하기</button>
+        </a>
+         </div>
+         <br>
+
+        <b>오픈런 위치 및 장소</b><br>
+        - 2월 14일 수요일 청담역<br>
+        - 2월 16일 금요일 여의도공원<br>
+        - 2월 17일 토요일 반포한강공원 잠수교<br>
+        - 2월 23일 금요일 옥수한강공원<br>
+        - 2월 25일 일요일 경복궁 <br>
+        
+
+        <br><br>
+
+        <a id="questions"></a>
+        <h2>질문</h2>
+        <b>Q. 러닝을 잘 못뛰는데, 처음인데 괜찮나요?</b><br>
+        네, 00runners는 펀런을 추구하는 크루로 초보자들도 함께 할 수 있습니다. 페이스 그룹이 나뉘어져 있어 부담없이 뛸 수 있습니다. 매주 진행되는 정규런과 다양한 번개런에 참여하면서 성장하는 본인의 모습을 발견해보세요!<br>
+        <b>Q. 가입비는 어디에 쓰이나요?</b><br>
+        짐 보관비용, 급수비, 이벤트 운영비 등 커뮤니티 운영을 위해 사용됩니다. 회비는 투명하게 운영하며 한 기수가 끝나게 되면 정규 회원 톡방에 영수증 등을 첨부하여 통장 내역을 공개합니다.<br>
+        <b>Q. 빠른 01도 가입 가능한가요?</b><br>
+        아쉽게도 불가능합니다. 게스트 또한 00년생만 가능합니다.<br>
+        <b>게스트 4번 이상 참석하면서 가입비를 또 내야하나요?</b><br>
+        아닙니다. 게스트로 참여하면서 낸 참여비가 가입비가 됩니다
+        <br><br><br><br><br><br>
+
+        
+        <div class="footer" style="color: rgb(78, 78, 78); text-align: center;">
+            <hr><br>
+            "용기를 가지고 달려요!"<br>
+            00runners<br><br>
+            <small>
+            This page was designed/developed by 박종한 2023.<br>
+            Special thanks to @yoo.koon and @eseoabo for wonderful photos.</small>
+            <br><br>
+            <small style="font-size: 0.7rem;">
+            Song: KHEMIS, Coopex, ZANA - <a href="https://ncs.io/TidalWave" style="color: rgb(78, 78, 78)">Tidal Wave [NCS Release]</a><br>
+            Music provided by NoCopyrightSounds<br>
+            </small>
+            <br><br><br><br><br>
+        </div>
+
+
+        </div>
+    </div>
+
+    <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> -->
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <!-- <img src="..." class="rounded me-2" alt="..."> -->
+      <strong class="me-auto">00runners</strong>
+      <small>now</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      이미지가 겹쳐서 보이나요? 새로고침 해 보세요!
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="musicToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <!-- <img src="..." class="rounded me-2" alt="..."> -->
+        <strong class="me-auto">00runners</strong>
+        <small>now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        음악이 시작되었어.. 뛰러 나가고 싶지 않아?
+      </div>
+    </div>
+  </div>
+
+
+    
+
+    <script>
+          const toastLiveExample = document.getElementById('liveToast');
+          const musicToastLiveExample = document.getElementById('musicToast');
+          const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+          const musicToastBootstrap = bootstrap.Toast.getOrCreateInstance(musicToastLiveExample);
+
+        setTimeout(function() {
+            toastBootstrap.show(); // 페이지 새로 고침
+            }, 2000);
+        // const toastTrigger = document.getElementById('liveToastBtn')
+
+
+        document.getElementById("show-more-button").addEventListener("click", function() {
+            var moreContent = document.getElementById("more-content");
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "block";
+                document.getElementById("show-more-button").textContent = "hide";
+            } else {
+                moreContent.style.display = "none";
+                document.getElementById("show-more-button").textContent = "menu";
+            }
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+        var links = document.querySelectorAll(".custom-anchor");
+
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute("href").substring(1); 
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                var offset = 200; 
+                var targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                top: targetPosition - offset,
+                behavior: "smooth" 
+                });
+            }
+            });
+        }
+        });
+
+        var audio; // 오디오 객체를 저장할 변수
+
+        // 소리를 재생하는 함수
+        function playSound() {
+        audio = new Audio('src/KHEMIS, Coopex, ZANA - Tidal Wave [NCS Release].mp3'); // 소리 파일 경로를 지정해야 합니다.
+        audio.play();
+        document.getElementById('soundOn').style.display = 'none'; // "Sound On" 버튼 숨기기
+        document.getElementById('soundOff').style.display = 'inline-block'; // "Sound Off" 버튼 보이기
+        musicToastBootstrap.show();
+        }
+
+        // 소리를 중지하는 함수
+        function stopSound() {
+        if (audio) {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+        document.getElementById('soundOff').style.display = 'none'; // "Sound Off" 버튼 숨기기
+        document.getElementById('soundOn').style.display = 'inline-block'; // "Sound On" 버튼 보이기
+        }
+
+      
+        
+    </script>
+
+</body>
+</html>
